@@ -1,0 +1,16 @@
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.Form1.resources
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.Properties.Resources.resources
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\csharp2010\LUDecompoistion\LUDecompoistion\bin\Debug\LUDecompoistion.exe
+D:\csharp2010\LUDecompoistion\LUDecompoistion\bin\Debug\LUDecompoistion.pdb
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.exe
+D:\csharp2010\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.pdb
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.exe
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.pdb
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\bin\Debug\LUDecompoistion.exe
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\bin\Debug\LUDecompoistion.pdb
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.Form1.resources
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.Properties.Resources.resources
+C:\Users\admin\Desktop\LUDecomposition (2) (1)\LUDecompoistion\LUDecompoistion\obj\x86\Debug\LUDecompoistion.csproj.GenerateResource.Cache

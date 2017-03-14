@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{30649840-9CB9-486C-8DE1-D6B449021FC3}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets">
+    <Files>
+      <File FileName="LUDecompoistion\Matrix.cs" Line="180" Column="7" />
+      <File FileName="LUDecompoistion\Form1.cs" Line="93" Column="1" />
+      <File FileName="LUDecompoistion\Program.cs" Line="16" Column="13" />
+      <File FileName="LUDecompoistion\Properties\Settings.settings" Line="1" Column="1" />
+      <File FileName="LUDecompoistion\Properties\Resources.resx" Line="1" Column="1" />
+      <File FileName="LUDecompoistion\Form1.Designer.cs" Line="55" Column="72" />
+      <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" Line="3813" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LUDecompoistion PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
