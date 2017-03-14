@@ -1,0 +1,39 @@
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe.config
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.pdb
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csprojResolveAssemblyReference.cache
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Form1.resources
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Properties.Resources.resources
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csproj.GenerateResource.Cache
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.exe
+d:\Rigel\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.pdb
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe.config
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.exe
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.pdb
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.pdb
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csprojResolveAssemblyReference.cache
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Form1.resources
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Properties.Resources.resources
+D:\University of Bridgeprt\Semester 2\Parallel and Distributed Processing\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csproj.GenerateResource.Cache
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Skeleton\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe.config
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Skeleton\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.exe
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Skeleton\Swarm Logic Equation Solver\SwarmEquationSolver\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.pdb
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe.config
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.exe
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.pdb
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.pdb
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csprojResolveAssemblyReference.cache
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Form1.resources
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Properties.Resources.resources
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Workspace\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csproj.GenerateResource.Cache
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe.config
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.exe
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.pdb
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.exe
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\bin\Debug\SwarmEquationSolver.pdb
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csprojResolveAssemblyReference.cache
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Form1.resources
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.Properties.Resources.resources
+C:\Users\SMITDOSHI\Desktop\Parallel Processing\Assignment\SwarmEquationSolver\SwarmEquationSolver\obj\Debug\SwarmEquationSolver.csproj.GenerateResource.Cache
