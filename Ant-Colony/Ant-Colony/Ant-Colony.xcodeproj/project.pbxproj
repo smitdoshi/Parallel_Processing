@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A22E4FA21E778FDB00E8448D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22E4FA11E778FDB00E8448D /* main.cpp */; };
+		A27FE95F1E78645F00D10E73 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27FE95E1E78645F00D10E73 /* Random.cpp */; };
+		A27FE9621E787F3A00D10E73 /* Ant_Colony_Opt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A22E4F9C1E778FDB00E8448D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A22E4F9E1E778FDB00E8448D /* Ant-Colony */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ant-Colony"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A22E4FA11E778FDB00E8448D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A27FE95E1E78645F00D10E73 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ant_Colony_Opt.cpp; sourceTree = "<group>"; };
+		A27FE9611E787F3A00D10E73 /* Ant_Colony_Opt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ant_Colony_Opt.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A22E4F9B1E778FDB00E8448D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A22E4F951E778FDB00E8448D = {
+			isa = PBXGroup;
+			children = (
+				A22E4FA01E778FDB00E8448D /* Ant-Colony */,
+				A22E4F9F1E778FDB00E8448D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A22E4F9F1E778FDB00E8448D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A22E4F9E1E778FDB00E8448D /* Ant-Colony */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A22E4FA01E778FDB00E8448D /* Ant-Colony */ = {
+			isa = PBXGroup;
+			children = (
+				A22E4FA11E778FDB00E8448D /* main.cpp */,
+				A27FE95E1E78645F00D10E73 /* Random.cpp */,
+				A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */,
+				A27FE9611E787F3A00D10E73 /* Ant_Colony_Opt.hpp */,
+			);
+			path = "Ant-Colony";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A22E4F9D1E778FDB00E8448D /* Ant-Colony */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A22E4FA51E778FDB00E8448D /* Build configuration list for PBXNativeTarget "Ant-Colony" */;
+			buildPhases = (
+				A22E4F9A1E778FDB00E8448D /* Sources */,
+				A22E4F9B1E778FDB00E8448D /* Frameworks */,
+				A22E4F9C1E778FDB00E8448D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ant-Colony";
+			productName = "Ant-Colony";
+			productReference = A22E4F9E1E778FDB00E8448D /* Ant-Colony */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A22E4F961E778FDB00E8448D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "SMIT DOSHI";
+				TargetAttributes = {
+					A22E4F9D1E778FDB00E8448D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A22E4F991E778FDB00E8448D /* Build configuration list for PBXProject "Ant-Colony" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A22E4F951E778FDB00E8448D;
+			productRefGroup = A22E4F9F1E778FDB00E8448D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A22E4F9D1E778FDB00E8448D /* Ant-Colony */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A22E4F9A1E778FDB00E8448D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27FE95F1E78645F00D10E73 /* Random.cpp in Sources */,
+				A22E4FA21E778FDB00E8448D /* main.cpp in Sources */,
+				A27FE9621E787F3A00D10E73 /* Ant_Colony_Opt.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A22E4FA31E778FDB00E8448D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A22E4FA41E778FDB00E8448D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A22E4FA61E778FDB00E8448D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A22E4FA71E778FDB00E8448D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A22E4F991E778FDB00E8448D /* Build configuration list for PBXProject "Ant-Colony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A22E4FA31E778FDB00E8448D /* Debug */,
+				A22E4FA41E778FDB00E8448D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A22E4FA51E778FDB00E8448D /* Build configuration list for PBXNativeTarget "Ant-Colony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A22E4FA61E778FDB00E8448D /* Debug */,
+				A22E4FA71E778FDB00E8448D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A22E4F961E778FDB00E8448D /* Project object */;
+}
