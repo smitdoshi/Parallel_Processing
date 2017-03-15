@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A22E4FA21E778FDB00E8448D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A22E4FA11E778FDB00E8448D /* main.cpp */; };
-		A27FE95F1E78645F00D10E73 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27FE95E1E78645F00D10E73 /* Random.cpp */; };
+		A27FE95F1E78645F00D10E73 /* Randoms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27FE95E1E78645F00D10E73 /* Randoms.cpp */; };
 		A27FE9621E787F3A00D10E73 /* Ant_Colony_Opt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		A22E4F9E1E778FDB00E8448D /* Ant-Colony */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ant-Colony"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22E4FA11E778FDB00E8448D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		A27FE95E1E78645F00D10E73 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		A27FE95E1E78645F00D10E73 /* Randoms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Randoms.cpp; sourceTree = "<group>"; };
 		A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ant_Colony_Opt.cpp; sourceTree = "<group>"; };
 		A27FE9611E787F3A00D10E73 /* Ant_Colony_Opt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ant_Colony_Opt.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				A22E4FA11E778FDB00E8448D /* main.cpp */,
-				A27FE95E1E78645F00D10E73 /* Random.cpp */,
+				A27FE95E1E78645F00D10E73 /* Randoms.cpp */,
 				A27FE9601E787F3A00D10E73 /* Ant_Colony_Opt.cpp */,
 				A27FE9611E787F3A00D10E73 /* Ant_Colony_Opt.hpp */,
 			);
@@ -127,7 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A27FE95F1E78645F00D10E73 /* Random.cpp in Sources */,
+				A27FE95F1E78645F00D10E73 /* Randoms.cpp in Sources */,
 				A22E4FA21E778FDB00E8448D /* main.cpp in Sources */,
 				A27FE9621E787F3A00D10E73 /* Ant_Colony_Opt.cpp in Sources */,
 			);

@@ -11,26 +11,23 @@
 #include <cmath>
 #include <limits>
 
-class Randoms{
+class Randoms {
+    
 private:
     long xpto;
 public:
-    
-    //Generator seed.
-    Randoms (long x){
-        xpto = -x;
+    // Generator seed.
+    Randoms (long x) {xpto = -x;}
+    // Returns a random Gaussian number.
+    double Normal (double avg, double sigma)
+    {
+        return (avg+sigma*gaussdev(&xpto)) ;
     }
-    
-    //Returns a random Gaussian number.
-    double Normal(double avg, double sigma){
-        return (avg+sigma*gaussdev(&xpto));
-    }
-    
-    // Generate a uniform random number between 0 and 1.
-    double Uniforme(){
+    // Returns a uniform random number between 0 and 1.
+    double Uniforme()
+    {
         return ran1(&xpto);
     }
-    
     // Returns a random number between -m and m.
     double sorte(int m)
     {
@@ -81,11 +78,12 @@ public:
         j=iy/NDIV;                        //  Will be in the range 0..NTAB-1.
         iy=iv[j];                         // Output previously stored value and refill the
         iv[j] = *idum;                    // shuffle table.
-        if ((temp=AM*iy) > RNMX) 
+        if ((temp=AM*iy) > RNMX)
             return RNMX; 				   // Because users don't expect endpoint values.
-        else 
+        else
             return temp;
     }
+    
     
     // Function for Gauss
     float gaussdev(long *idum)

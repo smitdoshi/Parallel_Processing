@@ -17,122 +17,116 @@
 
 using namespace std;
 
-ACO :: ACO(int nAnts, int nCities, double alpha, double beta,
-           double q, double ro, double taumax, int initCity){
-    numbOFANTS = nAnts;
-    numbOFCITIES = nCities;
-    Alpha = alpha;
-    Beta = beta;
-    Q = q;
-    RO = ro;
-    TAUMAX = taumax;
-    initialCITY = initCity;
+ACO::ACO (int nAnts, int nCities,
+          double alpha, double beta, double q, double ro, double taumax,
+          int initCity) {
+    NUMBEROFANTS 	= nAnts;
+    NUMBEROFCITIES 	= nCities;
+    ALPHA 			= alpha;
+    BETA 			= beta;
+    Q 				= q;
+    RO 				= ro;
+    TAUMAX 			= taumax;
+    INITIALCITY		= initCity;
     
-    randoms = new Randoms(21);
+    randoms = new Randoms (21);	
 }
+
 
 // Pure Virtual Destructor indicating class ACO will be used as a Base Class.
-ACO:: ~ACO(){
-    for(int i=0;i<numbOFCITIES;i++){
-        delete [] Graph[i];
-        delete [] Cities[i];
-        delete [] Pheromones[i];
-        delete [] DeltaPheromones[i];
-        
-        if(i < numbOFCITIES -1){
-            delete [] Probs[i];
+ACO::~ACO () {
+    for(int i=0; i<NUMBEROFCITIES; i++) {
+        delete [] GRAPH[i];
+        delete [] CITIES[i];
+        delete [] PHEROMONES[i];
+        delete [] DELTAPHEROMONES[i];
+        if(i < NUMBEROFCITIES - 1) {
+            delete [] PROBS[i];
+        }
+    }
+    delete [] GRAPH;
+    delete [] CITIES;
+    delete [] PHEROMONES;
+    delete [] DELTAPHEROMONES;
+    delete [] PROBS;
+}
+
+void ACO::init () {
+    GRAPH 			= new int*[NUMBEROFCITIES];
+    CITIES 			= new double*[NUMBEROFCITIES];
+    PHEROMONES 		= new double*[NUMBEROFCITIES];
+    DELTAPHEROMONES = new double*[NUMBEROFCITIES];
+    PROBS 			= new double*[NUMBEROFCITIES-1];
+    for(int i=0; i<NUMBEROFCITIES; i++) {
+        GRAPH[i] 			= new int[NUMBEROFCITIES];
+        CITIES[i] 			= new double[2];
+        PHEROMONES[i] 		= new double[NUMBEROFCITIES];
+        DELTAPHEROMONES[i] 	= new double[NUMBEROFCITIES];
+        PROBS[i] 			= new double[2];
+        for (int j=0; j<2; j++) {
+            CITIES[i][j] = -1.0;
+            PROBS[i][j]  = -1.0;
+        }
+        for (int j=0; j<NUMBEROFCITIES; j++) {
+            GRAPH[i][j] 			= 0;
+            PHEROMONES[i][j] 		= 0.0;
+            DELTAPHEROMONES[i][j] 	= 0.0;
         }
     }
     
-    delete [] Graph;
-    delete [] Cities;
-    delete [] Pheromones;
-    delete [] DeltaPheromones;
-    delete [] Probs;
-    
-}
-
-void ACO::init(){
-    Graph = new int *[numbOFCITIES];
-    Cities = new double*[numbOFCITIES];
-    Pheromones = new double*[numbOFCITIES];
-    DeltaPheromones = new double*[numbOFCITIES];
-    Probs = new double*[numbOFCITIES];
-    
-    for(int i=0;i<numbOFCITIES;i++){
-        Graph[i] = new int[numbOFCITIES];
-        Cities[i] = new double[2];
-        Pheromones[i] = new double[numbOFCITIES];
-        DeltaPheromones[i] = new double[numbOFCITIES];
-        Probs[i] = new double[2];
-        
-        for(int j=0; j<2; j++){
-            Cities[i][j] = -1.0;
-            Probs[i][j] = -1.0;
-        }
-        
-        for(int j=0; j<numbOFCITIES;j++){
-            Graph[i][j] = 0;
-            Pheromones[i][j] = 0.0;
-            DeltaPheromones[i][j] = 0.0;
+    ROUTES = new int*[NUMBEROFANTS];
+    for (int i=0; i<NUMBEROFANTS; i++) {
+        ROUTES[i] = new int[NUMBEROFCITIES];
+        for (int j=0; j<NUMBEROFCITIES; j++) {
+            ROUTES[i][j] = -1;
         }
     }
     
-    Routes = new int*[numbOFANTS];
-    for (int i =0; i<numbOFANTS; i++) {
-        Routes[i] = new int [numbOFCITIES];
-        for (int j=0; i<numbOFCITIES; j++) {
-            Routes[i][j] = -1;
-        }
-    }
-    
-    BestLength = (double)INT_MAX;
-    BestRoute =  new int[numbOFCITIES];
-    for(int i=0;i<numbOFCITIES;i++){
-        BestRoute[i] = -1;
+    BESTLENGTH = (double) INT_MAX;
+    BESTROUTE  = new int[NUMBEROFCITIES];
+    for (int i=0; i<NUMBEROFCITIES; i++) {
+        BESTROUTE[i] = -1;	
     }
 }
 
-void ACO::connectCITIES(int cityi, int cityj){
-    Graph[cityi][cityj] = 1;
-    Pheromones[cityi][cityj] = randoms -> Uniforme() * TAUMAX;
-    Graph[cityi][cityj] = 1;
-    Pheromones[cityi][cityj] = Pheromones[cityi][cityj];
+void ACO::connectCITIES (int cityi, int cityj) {
+    GRAPH[cityi][cityj] = 1;
+    PHEROMONES[cityi][cityj] = randoms -> Uniforme() * TAUMAX;
+    GRAPH[cityj][cityi] = 1;
+    PHEROMONES[cityj][cityi] = PHEROMONES[cityi][cityj];
+}
+void ACO::setCITYPOSITION (int city, double x, double y) {
+    CITIES[city][0] = x;
+    CITIES[city][1] = y;
 }
 
-void ACO::setCityPosition(int city, double x, double y){
-    Cities[city][0] = x;
-    Cities[city][1]=y;
-}
-
-void ACO::printPheromones(){
-    cout << " printPheromones Function called.";  // Testing if function is called or not
-    cout<<" Pheromones: " <<endl;
+void ACO::printPHEROMONES () {
+    cout << " PHEROMONES: " << endl;
     cout << "  | ";
-    for (int i=0; i<numbOFCITIES; i++) {
+    for (int i=0; i<NUMBEROFCITIES; i++) {
         printf("%5d   ", i);
     }
     cout << endl << "- | ";
-    for (int i=0; i<numbOFCITIES; i++) {
+    for (int i=0; i<NUMBEROFCITIES; i++) {
         cout << "--------";
     }
     cout << endl;
-    for (int i=0; i<numbOFCITIES; i++) {
+    for (int i=0; i<NUMBEROFCITIES; i++) {
         cout << i << " | ";
-        for (int j=0; j<numbOFCITIES; j++) {
+        for (int j=0; j<NUMBEROFCITIES; j++) {
             if (i == j) {
                 printf ("%5s   ", "x");
                 continue;
             }
             if (exists(i, j)) {
-                printf ("%7.3f ", Pheromones[i][j]);
+                printf ("%7.3f ", PHEROMONES[i][j]);
             }
             else {
-                if(Pheromones[i][j] == 0.0) {
-                    printf ("%5.0f   ", Pheromones[i][j]);
+                if(PHEROMONES[i][j] == 0.0) {
+                    printf ("%5.0f   ", PHEROMONES[i][j]);
                 }
                 else {
-                    printf ("%7.3f ", Pheromones[i][j]);
+                    printf ("%7.3f ", PHEROMONES[i][j]);
                 }
             }
         }
@@ -141,48 +135,46 @@ void ACO::printPheromones(){
     cout << endl;
 }
 
-double ACO::distance(int cityi, int cityj){
+double ACO::distance (int cityi, int cityj) {
     return (double)
-    sqrt(pow(Cities[cityi][0] - Cities[cityj][0], 2)+
-         pow(Cities[cityi][1] - Cities[cityj][1],2));
+    sqrt (pow (CITIES[cityi][0] - CITIES[cityj][0], 2) +
+          pow (CITIES[cityi][1] - CITIES[cityj][1], 2));
 }
-
-bool ACO::exists(int cityi, int cityc){
-    return (Graph[cityi][cityc]==1);
+bool ACO::exists (int cityi, int cityc) {
+    return (GRAPH[cityi][cityc] == 1);
 }
-bool ACO::visited(int antK, int c){
-    for (int l=0; l<numbOFCITIES; l++) {
-        if (Routes[antK][l] == -1) {
+bool ACO::vizited (int antk, int c) {
+    for (int l=0; l<NUMBEROFCITIES; l++) {
+        if (ROUTES[antk][l] == -1) {
             break;
         }
-        if (Routes[antK][l] == c) {
+        if (ROUTES[antk][l] == c) {
             return true;
         }
     }
     return false;
 }
-
 double ACO::PHI (int cityi, int cityj, int antk) {
-    double ETAij = (double) pow (1 / distance (cityi, cityj), Beta);
-    double TAUij = (double) pow (Pheromones[cityi][cityj],   Alpha);
+    double ETAij = (double) pow (1 / distance (cityi, cityj), BETA);
+    double TAUij = (double) pow (PHEROMONES[cityi][cityj],   ALPHA);
     
     double sum = 0.0;
-    for (int c=0; c<numbOFCITIES; c++) {
+    for (int c=0; c<NUMBEROFCITIES; c++) {
         if (exists(cityi, c)) {
-            if (!visited(antk, c)) {
-                double ETA = (double) pow (1 / distance (cityi, c), Beta);
-                double TAU = (double) pow (Pheromones[cityi][c],   Alpha);
+            if (!vizited(antk, c)) {
+                double ETA = (double) pow (1 / distance (cityi, c), BETA);
+                double TAU = (double) pow (PHEROMONES[cityi][c],   ALPHA);
                 sum += ETA * TAU;
-            }	
-        }	
+            }
+        }
     }
     return (ETAij * TAUij) / sum;
 }
 
 double ACO::length (int antk) {
     double sum = 0.0;
-    for (int j=0; j<numbOFCITIES-1; j++) {
-        sum += distance (Routes[antk][j], Routes[antk][j+1]);
+    for (int j=0; j<NUMBEROFCITIES-1; j++) {
+        sum += distance (ROUTES[antk][j], ROUTES[antk][j+1]);
     }
     return sum;
 }
@@ -190,27 +182,27 @@ double ACO::length (int antk) {
 int ACO::city () {
     double xi = randoms -> Uniforme();
     int i = 0;
-    double sum = Probs[i][0];
+    double sum = PROBS[i][0];
     while (sum < xi) {
         i++;
-        sum += Probs[i][0];
+        sum += PROBS[i][0];
     }
-    return (int) Probs[i][1];
+    return (int) PROBS[i][1];
 }
 
 void ACO::route (int antk) {
-    Routes[antk][0] = initialCITY;
-    for (int i=0; i<numbOFCITIES-1; i++) {
-        int cityi = Routes[antk][i];
+    ROUTES[antk][0] = INITIALCITY;
+    for (int i=0; i<NUMBEROFCITIES-1; i++) {
+        int cityi = ROUTES[antk][i];
         int count = 0;
-        for (int c=0; c<numbOFCITIES; c++) {
+        for (int c=0; c<NUMBEROFCITIES; c++) {
             if (cityi == c) {
                 continue;
             }
             if (exists (cityi, c)) {
-                if (!visited (antk, c)) {
-                    Probs[count][0] = PHI (cityi, c, antk);
-                    Probs[count][1] = (double) c;
+                if (!vizited (antk, c)) {
+                    PROBS[count][0] = PHI (cityi, c, antk);
+                    PROBS[count][1] = (double) c;
                     count++;
                 }
                 
@@ -222,14 +214,13 @@ void ACO::route (int antk) {
             return;
         }
         
-        Routes[antk][i+1] = city();
+        ROUTES[antk][i+1] = city();
     }
 }
-
 int ACO::valid (int antk, int iteration) {
-    for(int i=0; i<numbOFCITIES-1; i++) {
-        int cityi = Routes[antk][i];
-        int cityj = Routes[antk][i+1];
+    for(int i=0; i<NUMBEROFCITIES-1; i++) {
+        int cityi = ROUTES[antk][i];
+        int cityj = ROUTES[antk][i+1];
         if (cityi < 0 || cityj < 0) {
             return -1;
         }
@@ -237,43 +228,42 @@ int ACO::valid (int antk, int iteration) {
             return -2;
         }
         for (int j=0; j<i-1; j++) {
-            if (Routes[antk][i] == Routes[antk][j]) {
+            if (ROUTES[antk][i] == ROUTES[antk][j]) {
                 return -3;
             }
         }
     }
     
-    if (!exists (initialCITY, Routes[antk][numbOFCITIES-1])) {
+    if (!exists (INITIALCITY, ROUTES[antk][NUMBEROFCITIES-1])) {
         return -4;
     }
     
     return 0;
 }
 
-
-void ACO::printGraph(){
+void ACO::printGRAPH () {
     cout << " GRAPH: " << endl;
     cout << "  | ";
-    for( int i=0; i<numbOFCITIES; i++) {
+    for( int i=0; i<NUMBEROFCITIES; i++) {
         cout << i << " ";
     }
     cout << endl << "- | ";
-    for (int i=0; i<numbOFCITIES; i++) {
+    for (int i=0; i<NUMBEROFCITIES; i++) {
         cout << "- ";
     }
     cout << endl;
     int count = 0;
-    for (int i=0; i<numbOFCITIES; i++) {
+    for (int i=0; i<NUMBEROFCITIES; i++) {
         cout << i << " | ";
-        for (int j=0; j<numbOFCITIES; j++) {
+        for (int j=0; j<NUMBEROFCITIES; j++) {
             if(i == j) {
                 cout << "x ";
             }
             else {
-                cout << Graph[i][j] << " ";
+                cout << GRAPH[i][j] << " ";
             }
-            if (Graph[i][j] == 1) {
-                count++;	
+            if (GRAPH[i][j] == 1) {
+                count++;
             }
         }
         cout << endl;
@@ -281,79 +271,78 @@ void ACO::printGraph(){
     cout << endl;
     cout << "Number of connections: " << count << endl << endl;
 }
-
-
-void ACO::printResult(){
-    BestLength += distance (BestRoute[numbOFCITIES-1], initialCITY);
+void ACO::printRESULTS () {
+    BESTLENGTH += distance (BESTROUTE[NUMBEROFCITIES-1], INITIALCITY);
     cout << " BEST ROUTE:" << endl;
-    for (int i=0; i<numbOFCITIES; i++) {
-        cout << BestRoute[i] << " ";
+    for (int i=0; i<NUMBEROFCITIES; i++) {
+        cout << BESTROUTE[i] << " ";
     }
-    cout << endl << "length: " << BestLength << endl;
+    cout << endl << "length: " << BESTLENGTH << endl;
     
     cout << endl << " IDEAL ROUTE:" << endl;
     cout << "0 7 6 2 4 5 1 3" << endl;
     cout << "length: 127.509" << endl;
 }
 
-void ACO::updatePheromones(){
-    for (int k=0; k<numbOFANTS; k++) {
+void ACO::updatePHEROMONES () {
+    for (int k=0; k<NUMBEROFANTS; k++) {
         double rlength = length(k);
-        for (int r=0; r<numbOFCITIES-1; r++) {
-            int cityi = Routes[k][r];
-            int cityj = Routes[k][r+1];
-            DeltaPheromones[cityi][cityj] += Q / rlength;
-            DeltaPheromones[cityj][cityi] += Q / rlength;
+        for (int r=0; r<NUMBEROFCITIES-1; r++) {
+            int cityi = ROUTES[k][r];
+            int cityj = ROUTES[k][r+1];
+            DELTAPHEROMONES[cityi][cityj] += Q / rlength;
+            DELTAPHEROMONES[cityj][cityi] += Q / rlength;
         }
     }
-    for (int i=0; i<numbOFCITIES; i++) {
-        for (int j=0; j<numbOFCITIES; j++) {
-            Pheromones[i][j] = (1 - RO) * Pheromones[i][j] + DeltaPheromones[i][j];
-            DeltaPheromones[i][j] = 0.0;
-        }	
+    for (int i=0; i<NUMBEROFCITIES; i++) {
+        for (int j=0; j<NUMBEROFCITIES; j++) {
+            PHEROMONES[i][j] = (1 - RO) * PHEROMONES[i][j] + DELTAPHEROMONES[i][j];
+            DELTAPHEROMONES[i][j] = 0.0;
+        }
     }
 }
+
 
 void ACO::optimize (int ITERATIONS) {
     for (int iterations=1; iterations<=ITERATIONS; iterations++) {
         cout << flush;
         cout << "ITERATION " << iterations << " HAS STARTED!" << endl << endl;
         
-        for (int k=0; k<numbOFANTS; k++) {
+        for (int k=0; k<NUMBEROFANTS; k++) {
             cout << " : ant " << k << " has been released!" << endl;
             while (0 != valid(k, iterations)) {
                 cout << "  :: releasing ant " << k << " again!" << endl;
-                for (int i=0; i<numbOFCITIES; i++) {
-                    Routes[k][i] = -1;
+                for (int i=0; i<NUMBEROFCITIES; i++) {
+                    ROUTES[k][i] = -1;	
                 }
                 route(k);
             }
             
-            for (int i=0; i<numbOFCITIES; i++) {
-                cout << Routes[k][i] << " ";
+            for (int i=0; i<NUMBEROFCITIES; i++) {
+                cout << ROUTES[k][i] << " ";	
             }
             cout << endl;
             
             cout << "  :: route done" << endl;
             double rlength = length(k);
             
-            if (rlength < BestLength) {
-                BestLength = rlength;
-                for (int i=0; i<numbOFCITIES; i++) {
-                    BestRoute[i] = Routes[k][i];
+            if (rlength < BESTLENGTH) {
+                BESTLENGTH = rlength;
+                for (int i=0; i<NUMBEROFCITIES; i++) {
+                    BESTROUTE[i] = ROUTES[k][i];
                 }
             }
-            cout << " : ant " << k << " has ended!" << endl;
-        }
+            cout << " : ant " << k << " has ended!" << endl;				
+        }		
         
         cout << endl << "updating PHEROMONES . . .";
-        updatePheromones();
+        updatePHEROMONES ();
         cout << " done!" << endl << endl;
-        printPheromones();
+        printPHEROMONES ();
         
-        for (int i=0; i<numbOFANTS; i++) {
-            for (int j=0; j<numbOFCITIES; j++) {
-                Routes[i][j] = -1;
+        for (int i=0; i<NUMBEROFANTS; i++) {
+            for (int j=0; j<NUMBEROFCITIES; j++) {
+                ROUTES[i][j] = -1;
             }
         }
         
